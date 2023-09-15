@@ -19,7 +19,7 @@ Aquí te mostramos como convertir la tasa de interes para diferentes periodos de
 '''
 
 tasa = st.number_input('¿Cual es la tasa de interes (%)?', 0.00, 100.00, 0.00, 0.10)
-variable = st.selectbox('¿En que unidad de tiempo tienes tu tasa de interes?:', variables, 0)
+variable = st.selectbox('¿En que unidad de tiempo tienes tu tasa de interes?:', tiempos, 0)
 
 if variable == 'Diario':
     Tasa_anual = (1+tasa/100)**365-1
