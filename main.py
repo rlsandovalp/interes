@@ -12,9 +12,9 @@ tiempos = ['Anual', 'Semestral', 'Trimestral', 'Mensual', 'Diario']
 
 
 r'''
-# Calcular la tasa de interes 📈
+# Calcúla tasas de interés 📈
 
-Aquí te mostramos como convertir la tasa de interes para diferentes periodos de tiempo.
+Aquí te mostramos como convertir una tasa de interés a diferentes periodos de tiempo.
 
 '''
 
@@ -30,7 +30,7 @@ elif variable == 'Trimestral':
 elif variable == 'Semestral':
     Tasa_anual = (1+tasa/100)**2-1
 else:
-    Tasa_anual = variable
+    Tasa_anual = tasa/100
 
 tasa_diaria = (1+Tasa_anual)**(1/365)-1
 tasa_mensual = (1+Tasa_anual)**(1/12)-1
@@ -39,7 +39,8 @@ tasa_semestral = (1+Tasa_anual)**(1/2)-1
 
 
 ## Visualizacion de los resultados
-
+st.title('Resultados 👩🏻‍💻')
+st.write('Estos son los resultados:')
 st.write('La tasa de interes diaria es: ', round(tasa_diaria*100,2), '%')
 st.write('La tasa de interes mensual es: ', round(tasa_mensual*100,2), '%')
 st.write('La tasa de interes trimestral es: ', round(tasa_trimestral*100,2), '%')
