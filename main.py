@@ -29,6 +29,8 @@ elif variable == 'Trimestral':
     Tasa_anual = (1+tasa/100)**4-1
 elif variable == 'Semestral':
     Tasa_anual = (1+tasa/100)**2-1
+else:
+    Tasa_anual = variable
 
 tasa_diaria = (1+Tasa_anual)**(1/365)-1
 tasa_mensual = (1+Tasa_anual)**(1/12)-1
